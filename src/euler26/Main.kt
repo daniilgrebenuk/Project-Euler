@@ -4,7 +4,7 @@ fun main() {
     val d = 1000
     var maxLength = 0
     var result = 0
-    for (i in 1 until 1000) {
+    for (i in 1 until d) {
         val temp = getRecurringCycleLength(i)
         if (temp > maxLength) {
             maxLength = temp
