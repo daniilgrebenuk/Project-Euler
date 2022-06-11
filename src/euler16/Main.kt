@@ -9,7 +9,7 @@ fun main() {
         BigInteger.valueOf(2L).pow(power)
             .toString()
             .chars()
-            .map { it - 48}
+            .map { it - 48 }
             .sum()
     )
 }
