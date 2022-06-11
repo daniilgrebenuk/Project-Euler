@@ -15,8 +15,10 @@ fun main() {
 
 fun Long.getDivisorsCount(): Int {
     var counter = 1
-    for (i in 2..sqrt(this.toDouble()).toInt())
+    val sqrtOfNumber = sqrt(this.toDouble()).toLong()
+    for (i in 2..sqrtOfNumber)
         if (this % i == 0L)
             counter++
-    return counter * 2
+
+    return if(sqrtOfNumber * sqrtOfNumber == this) counter * 2 - 1 else counter * 2
 }
