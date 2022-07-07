@@ -27,7 +27,7 @@ fun main() {
 }
 
 
-fun getPrimesBelowNumber(number: Int): Set<Int> {
+private fun getPrimesBelowNumber(number: Int): Set<Int> {
     val primes = HashSet<Int>()
     val booleanArray = BooleanArray(number) { true }
     booleanArray[0] = false

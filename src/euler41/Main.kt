@@ -4,6 +4,7 @@ import kotlin.math.max
 import kotlin.math.sqrt
 
 fun main() {
+    val start = System.currentTimeMillis()
     val primes = getPrimesBelowNumber(10_000_000)
     var res = 0
     for (prime in primes) {
@@ -12,6 +13,7 @@ fun main() {
     }
 
     println(res)
+    println(start - System.currentTimeMillis())
 }
 
 fun Int.isPandigital(): Boolean {
@@ -31,7 +33,7 @@ fun Int.isPandigital(): Boolean {
     return true
 }
 
-fun getPrimesBelowNumber(number: Int): List<Int> {
+private fun getPrimesBelowNumber(number: Int): List<Int> {
     val primes = ArrayList<Int>()
     val booleanArray = BooleanArray(number) { true }
     booleanArray[0] = false

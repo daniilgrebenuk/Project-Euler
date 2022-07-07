@@ -25,13 +25,13 @@ fun main() {
     println(counter)
 }
 
-fun Int.rotateNumber(): Int {
+private fun Int.rotateNumber(): Int {
     val str = this.toString()
     return (str.last() + str.substring(0, str.length - 1)).toInt()
 }
 
 
-fun getPrimesBelowNumber(number: Int): Set<Int> {
+private fun getPrimesBelowNumber(number: Int): Set<Int> {
     val primes = HashSet<Int>()
     val booleanArray = BooleanArray(number) { true }
     booleanArray[0] = false
