@@ -18,11 +18,10 @@ fun main() {
                     primesMap[primesList[indexInner]]?.add(prime)
                 }
             }catch (_:Exception){
-                if ("$prime${primesList[indexInner]}".toLong().isPrime()
-                    && "${primesList[indexInner]}$prime".toLong().isPrime()
-                ) {
-                    primesMap[prime]?.add(primesList[indexInner])
-                    primesMap[primesList[indexInner]]?.add(prime)
+                if(indexInner == index + 1){
+                    break@OUTER
+                }else {
+                    break
                 }
             }
         }
@@ -67,15 +66,6 @@ fun main() {
         }
     }
 
-}
-
-private fun Long.isPrime():Boolean{
-    for (i in 2..sqrt(this.toDouble()).toLong()) {
-        if(this % i == 0L){
-            return false
-        }
-    }
-    return true
 }
 
 private fun getPrimesBelowNumber(number: Int): Set<Int> {
