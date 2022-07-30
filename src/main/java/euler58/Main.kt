@@ -1,8 +1,5 @@
 package euler58
 
-import java.math.BigInteger
-
-/*
 import kotlin.math.sqrt
 
 fun main() {
@@ -29,9 +26,9 @@ fun main() {
             next += adder
         }
         spiralCounter++
-        if ((next).isPrime()){
+        if ((next).isPrime()) {
             primeCounter++
-        }else {
+        } else {
             notPrimeCounter++
         }
     }
@@ -39,22 +36,10 @@ fun main() {
 
 }
 
-private fun Int.isPrime():Boolean {
-    for (i in 2 .. sqrt(this.toDouble()).toInt()) {
+private fun Int.isPrime(): Boolean {
+    for (i in 2..sqrt(this.toDouble()).toInt()) {
         if (this % i == 0)
             return false
     }
     return true
-}*/
-
-fun main() {
-    println(100.factorial())
-}
-
-fun Int.factorial(): BigInteger {
-    var temp = BigInteger.ONE
-    for (i in 1..this){
-        temp *= i.toBigInteger()
-    }
-    return temp
 }

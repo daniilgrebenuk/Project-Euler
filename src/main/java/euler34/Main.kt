@@ -10,7 +10,7 @@ fun main() {
     println(sum)
 }
 
-fun Int.factorial(): Int {
+private fun Int.factorial(): Int {
     if (this == 1 || this == 0)
         return 1
     return this * (this - 1).factorial()
