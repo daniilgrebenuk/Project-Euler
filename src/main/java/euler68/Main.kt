@@ -4,8 +4,8 @@ import java.util.*
 
 fun main() {
     val start = System.currentTimeMillis()
-    var res = "0"
-    OUTER@ for (list in listOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10).permuted()) {
+    var res = "0".repeat(1000)
+    OUTER@ for (list in (1..10).toList().permuted()) {
         val temp = prepareList(list)
         for (i in 1 until list.size / 3) {
             if (temp[0] + temp[1] + temp[2] != temp[0 + i * 3] + temp[1 + i * 3] + temp[2 + i * 3])
@@ -13,7 +13,7 @@ fun main() {
         }
 
         val tempS = temp.prepareString()
-        if (tempS.length == 16)
+        if (tempS.length <= res.length)
             res = maxOf(res, tempS)
     }
     println(res)
