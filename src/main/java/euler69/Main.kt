@@ -9,7 +9,7 @@ fun main() {
     var current = 1
     for (prime in primes) {
         current *= prime
-        if (current > 1_000_000){
+        if (current > 1_000_000) {
             println(last)
             break
         }

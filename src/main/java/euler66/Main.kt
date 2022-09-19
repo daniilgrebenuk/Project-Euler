@@ -12,7 +12,7 @@ fun main() {
     for (i in 2..1000) {
         if (!i.isSquare()) {
             val res = find(i)
-            if (max < res.first){
+            if (max < res.first) {
                 max = res.first
                 ans = i
             }
@@ -29,7 +29,7 @@ fun find(dTemp: Int): Pair<BigInteger, BigInteger> {
         if (x.toString().length > 100)
             return BigInteger("-1") to BigInteger("-1")
 
-        if (isCorrectAnswer(x, y, d)){
+        if (isCorrectAnswer(x, y, d)) {
             return x to y
         }
     }

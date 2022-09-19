@@ -17,7 +17,7 @@ fun main() {
 }
 
 private fun arePermutation(vararg arr: Int): Boolean =
-        arr.map { String(it.toString().toCharArray().sortedArray()) }.distinct().size == 1
+    arr.map { String(it.toString().toCharArray().sortedArray()) }.distinct().size == 1
 
 private fun getPrimesWithFourNumber(): Set<Int> {
     val number = 10000

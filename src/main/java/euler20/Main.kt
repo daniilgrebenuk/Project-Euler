@@ -7,7 +7,7 @@ fun main() {
     println(
         IntStream.range(1, 100)
             .mapToObj { BigInteger.valueOf(it.toLong()) }
-            .reduce { b1, b2 -> b1.multiply( b2) }
+            .reduce { b1, b2 -> b1.multiply(b2) }
             .get()
             .toString()
             .chars()

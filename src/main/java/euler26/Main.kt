@@ -14,12 +14,12 @@ fun main() {
     println(result)
 }
 
-fun getRecurringCycleLength(divider: Int): Int{
+fun getRecurringCycleLength(divider: Int): Int {
     var dividend = 1
     val set = LinkedHashSet<Int>()
     while (dividend % divider != 0) {
         if (dividend < divider) {
-            if (set.contains(dividend)){
+            if (set.contains(dividend)) {
                 return set.size - set.indexOf(dividend)
             }
             set.add(dividend)

@@ -6,17 +6,17 @@ fun main() {
     println(getPermutationOfString(startString)[numberOfElement - 1])
 }
 
-fun getPermutationOfString(string: String):List<String> {
+fun getPermutationOfString(string: String): List<String> {
     val permutations = ArrayList<String>()
     fun recursivePermutation(currentString: String, remaining: List<Char>) {
-        if (remaining.isNotEmpty()){
+        if (remaining.isNotEmpty()) {
             for (c in remaining) {
                 val nextString = currentString + c
                 val nextRemaining = ArrayList(remaining)
                 nextRemaining -= c
                 recursivePermutation(nextString, nextRemaining)
             }
-        }else{
+        } else {
             permutations += currentString
         }
     }

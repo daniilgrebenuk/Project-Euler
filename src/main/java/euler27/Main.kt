@@ -23,6 +23,7 @@ fun main() {
             counter++
         return counter
     }
+
     var resultMultiplication = 0
     var maxLength = 0
 

@@ -20,5 +20,5 @@ fun Long.getDivisorsCount(): Int {
         if (this % i == 0L)
             counter++
 
-    return if(sqrtOfNumber * sqrtOfNumber == this) counter * 2 - 1 else counter * 2
+    return if (sqrtOfNumber * sqrtOfNumber == this) counter * 2 - 1 else counter * 2
 }

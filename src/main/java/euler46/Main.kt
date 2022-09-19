@@ -14,14 +14,14 @@ fun main() {
     }
 
 
-    OUTER@for (numberForCheck in numbersForCheck) {
+    OUTER@ for (numberForCheck in numbersForCheck) {
 
         for (prime in primes) {
             if (numberForCheck < prime) {
                 break
             }
 
-            if (((numberForCheck - prime) / 2).isSquare()){
+            if (((numberForCheck - prime) / 2).isSquare()) {
                 continue@OUTER
             }
         }

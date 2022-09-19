@@ -16,7 +16,7 @@ fun main() {
         }
 
         currentNumber += currentAdder
-        if(counter == 0){
+        if (counter == 0) {
             currentNumber--
         }
 

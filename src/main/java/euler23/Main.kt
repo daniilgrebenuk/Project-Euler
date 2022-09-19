@@ -1,8 +1,6 @@
 package euler23
 
 import java.util.*
-import kotlin.collections.ArrayList
-import kotlin.collections.LinkedHashSet
 import kotlin.math.sqrt
 
 fun main() {
@@ -32,7 +30,7 @@ fun main() {
     for (number in 1..28123) {
         if (number == toCheck.first) {
             toCheck.removeFirst()
-        }else {
+        } else {
             sum += number
         }
     }

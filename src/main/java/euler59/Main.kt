@@ -24,7 +24,7 @@ fun main() {
         for (b in 'a'..'z') {
             for (c in 'a'..'z') {
                 val temp = resolveBytes(a, b, c)
-                if (temp.contains("and") && temp.contains("the") && temp.contains("this")){
+                if (temp.contains("and") && temp.contains("the") && temp.contains("this")) {
                     println(temp.chars().sum())
                 }
             }

@@ -77,7 +77,7 @@ enum class CombinationType {
             val secondCards = second.cards.groupingBy { it.rank }.eachCount().entries.sortedBy { it.value }.map { it.key }
 
             val tempCompare = firstCards[1].compareTo(secondCards[1])
-            if (tempCompare != 0){
+            if (tempCompare != 0) {
                 return tempCompare
             }
             return firstCards[0].compareTo(secondCards[0])
@@ -90,12 +90,12 @@ enum class CombinationType {
             val secondPares = second.cards.groupingBy { it.rank }.eachCount().filter { it.value == 2 }.map { it.key }.sortedDescending()
 
             var tempCompare = firstPares[0].compareTo(secondPares[0])
-            if (tempCompare != 0){
+            if (tempCompare != 0) {
                 return tempCompare
             }
 
             tempCompare = firstPares[1].compareTo(secondPares[1])
-            if (tempCompare != 0){
+            if (tempCompare != 0) {
                 return tempCompare
             }
 
@@ -107,7 +107,7 @@ enum class CombinationType {
             val secondPare = second.cards.groupingBy { it.rank }.eachCount().maxByOrNull { it.value }!!.key
 
             val tempCompare = firstPare.compareTo(secondPare)
-            if (tempCompare != 0){
+            if (tempCompare != 0) {
                 return tempCompare
             }
 

@@ -6,15 +6,15 @@ fun main() {
     var counter = 0
     for (i in 1..1000) {
         val fraction = calculateFraction(i)
-        if(fraction.numerator.toString().length > fraction.denominator.toString().length)
+        if (fraction.numerator.toString().length > fraction.denominator.toString().length)
             counter++
     }
     println(counter)
 }
 
-private fun calculateFraction(n: Int):Fraction {
+private fun calculateFraction(n: Int): Fraction {
     var fraction = 1 dv 2
-    for (i in 1 until n){
+    for (i in 1 until n) {
         fraction = (fraction + 2).reverse()
     }
 

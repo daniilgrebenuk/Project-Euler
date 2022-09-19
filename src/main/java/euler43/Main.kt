@@ -10,13 +10,13 @@ fun main() {
 }
 
 private fun String.isPerfect(): Boolean = when {
-    this.substring(1,4).toInt() % 2 != 0 -> false
-    this.substring(2,5).toInt() % 3 != 0 -> false
-    this.substring(3,6).toInt() % 5 != 0 -> false
-    this.substring(4,7).toInt() % 7 != 0 -> false
-    this.substring(5,8).toInt() % 11 != 0 -> false
-    this.substring(6,9).toInt() % 13 != 0 -> false
-    this.substring(7,10).toInt() % 17 != 0 -> false
+    this.substring(1, 4).toInt() % 2 != 0 -> false
+    this.substring(2, 5).toInt() % 3 != 0 -> false
+    this.substring(3, 6).toInt() % 5 != 0 -> false
+    this.substring(4, 7).toInt() % 7 != 0 -> false
+    this.substring(5, 8).toInt() % 11 != 0 -> false
+    this.substring(6, 9).toInt() % 13 != 0 -> false
+    this.substring(7, 10).toInt() % 17 != 0 -> false
     else -> true
 }
 

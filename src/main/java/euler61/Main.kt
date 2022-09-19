@@ -29,8 +29,7 @@ fun main() {
                 }
                 indexes.addLast(tempIndex)
             }
-        }
-        else if (lastElements[0].second / 100 == lastElements.last().second % 100) {
+        } else if (lastElements[0].second / 100 == lastElements.last().second % 100) {
             println(lastElements.sumOf { it.second })
             return true
         }

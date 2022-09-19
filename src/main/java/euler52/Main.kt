@@ -1,9 +1,9 @@
 package euler52
 
 fun main() {
-    OUTER@for (i in 1..10_000_000) {
+    OUTER@ for (i in 1..10_000_000) {
         for (j in 2..6) {
-            if (i.sortNumberInValue() != (i * j).sortNumberInValue()){
+            if (i.sortNumberInValue() != (i * j).sortNumberInValue()) {
                 continue@OUTER
             }
         }

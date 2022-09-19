@@ -1,6 +1,6 @@
 package euler54
 
-data class Card(val rank: Rank, val suit: Suit): Comparable<Card> {
+data class Card(val rank: Rank, val suit: Suit) : Comparable<Card> {
 
     constructor(card: String) : this(Rank.valueOf(card[0]), Suit.valueOf(card[1]))
 

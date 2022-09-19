@@ -6,7 +6,7 @@ fun main() {
     val primes = getPrimesBelowNumber(1_000_000)
 
     fun Int.isInterestingPrime(): Boolean {
-        if(this < 10)
+        if (this < 10)
             return false
 
         val primeString = this.toString()

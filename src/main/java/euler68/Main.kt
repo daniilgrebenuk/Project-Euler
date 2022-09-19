@@ -20,12 +20,12 @@ fun main() {
     println("Time: ${System.currentTimeMillis() - start}")
 }
 
-private fun <T: Comparable<T>> List<T>.prepareString() :String {
+private fun <T : Comparable<T>> List<T>.prepareString(): String {
     val index = this.findMinElementByStep()
     return "${this.subList(index, size).joinToString(separator = "")}${this.subList(0, index).joinToString(separator = "")}"
 }
 
- fun <T : Comparable<T>> List<T>.findMinElementByStep(step: Int = 3): Int {
+fun <T : Comparable<T>> List<T>.findMinElementByStep(step: Int = 3): Int {
     var temp = this[0]
     var res = 0
     for ((index, t) in withIndex()) {

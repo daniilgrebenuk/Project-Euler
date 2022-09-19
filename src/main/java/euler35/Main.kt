@@ -6,7 +6,7 @@ fun main() {
     val threshold = 1_000_000
     val primes = getPrimesBelowNumber(threshold)
 
-    fun isCircularPrime(number: Int): Boolean{
+    fun isCircularPrime(number: Int): Boolean {
         var numberToRotate = number.rotateNumber().toInt()
 
         while (numberToRotate != number) {
@@ -17,6 +17,7 @@ fun main() {
 
         return true
     }
+
     var counter = 0
     for (prime in primes) {
         if (isCircularPrime(prime))

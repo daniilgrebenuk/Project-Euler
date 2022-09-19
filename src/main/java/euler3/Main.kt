@@ -8,9 +8,9 @@ fun main() {
     var lastFactor = 2L
 
     while (num % 2 == 0L) {
-        num/=2
+        num /= 2
     }
-    if(num != 1L)
+    if (num != 1L)
         lastFactor = 3L
 
     var factor = 3L
@@ -19,11 +19,11 @@ fun main() {
         if (num % factor == 0L) {
             lastFactor = factor
             while (num % factor == 0L)
-                num/=factor
+                num /= factor
             threshold = sqrt(num.toDouble()).toLong()
         }
         factor++
     }
 
-    println(if(num == 1L) lastFactor else num)
+    println(if (num == 1L) lastFactor else num)
 }

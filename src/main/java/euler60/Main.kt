@@ -8,7 +8,7 @@ fun main() {
     val primesList = primes.toList().subList(0, 3_000)
     val primesMap = primesList.associateWith { LinkedHashSet<Int>() }
 
-    OUTER@for ((index, prime) in primesList.withIndex()) {
+    OUTER@ for ((index, prime) in primesList.withIndex()) {
         for (indexInner in index + 1 until primesList.size) {
             try {
                 if (primes.contains("$prime${primesList[indexInner]}".toInt())
@@ -17,10 +17,10 @@ fun main() {
                     primesMap[prime]?.add(primesList[indexInner])
                     primesMap[primesList[indexInner]]?.add(prime)
                 }
-            }catch (_:Exception){
-                if(indexInner == index + 1){
+            } catch (_: Exception) {
+                if (indexInner == index + 1) {
                     break@OUTER
-                }else {
+                } else {
                     break
                 }
             }
@@ -53,7 +53,7 @@ fun main() {
                     listsToAdd += list
                 }
             }
-            for (list in listsToAdd){
+            for (list in listsToAdd) {
                 val temp = ArrayList(list)
                 temp += prime
                 if (temp.size == 5) {

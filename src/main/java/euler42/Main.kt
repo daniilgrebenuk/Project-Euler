@@ -18,7 +18,7 @@ fun main() {
 
     var counter = 0
     names.forEach {
-        if (setOfTriangleNumber.contains(it.chars().map { c -> c + 1 - 'A' .code}.sum())) counter++
+        if (setOfTriangleNumber.contains(it.chars().map { c -> c + 1 - 'A'.code }.sum())) counter++
     }
     println(counter)
 }

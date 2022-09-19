@@ -2,12 +2,12 @@ package euler47
 
 fun main() {
     var start = System.currentTimeMillis()
-    for (number in 1..1_000_000){
+    for (number in 1..1_000_000) {
         if (
-                (number).divisorCount() == 4 &&
-                (number + 1).divisorCount() == 4 &&
-                (number + 2).divisorCount() == 4 &&
-                (number + 3).divisorCount() == 4
+            (number).divisorCount() == 4 &&
+            (number + 1).divisorCount() == 4 &&
+            (number + 2).divisorCount() == 4 &&
+            (number + 3).divisorCount() == 4
         ) {
             println(number)
             break
