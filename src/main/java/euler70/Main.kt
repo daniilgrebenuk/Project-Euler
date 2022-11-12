@@ -30,16 +30,11 @@ fun main() {
     println("Time: ${System.currentTimeMillis() - start}")
 }
 
-fun isPermutation(firstNumber: Int, secondNumber: Int) =
+private fun isPermutation(firstNumber: Int, secondNumber: Int) =
     firstNumber.toString().toCharArray().sorted() == secondNumber.toString().toCharArray().sorted()
 
-fun fiFunction(number: Pair<Int, List<Int>>): Int {
-    var res = number.first + 1
-    for (div in number.second) {
-        res -= div
-    }
-
-    return res
+private fun fiFunction(number: Pair<Int, List<Int>>): Int {
+    return number.first + 1 - number.second.sum()
 }
 
 private fun getPrimesBelowNumber(number: Int): List<Int> {
