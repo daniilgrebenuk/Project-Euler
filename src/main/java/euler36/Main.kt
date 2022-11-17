@@ -9,9 +9,9 @@ fun main() {
     println(sum)
 }
 
-fun Int.isFullPalindromic(): Boolean = isPalindromic(this.toString()) && isPalindromic(this.toString(2))
+private fun Int.isFullPalindromic(): Boolean = isPalindromic(this.toString()) && isPalindromic(this.toString(2))
 
-fun isPalindromic(s: String): Boolean {
+private fun isPalindromic(s: String): Boolean {
     val chars = s.toCharArray()
     for (i in 0..chars.size / 2) {
         if (chars[i] != chars[chars.size - i - 1])

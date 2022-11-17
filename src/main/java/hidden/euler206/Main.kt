@@ -1,4 +1,4 @@
-package euler206
+package hidden.euler206
 
 import kotlin.math.floor
 import kotlin.math.sqrt

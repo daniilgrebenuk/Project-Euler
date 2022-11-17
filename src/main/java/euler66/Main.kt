@@ -21,7 +21,7 @@ fun main() {
     println(ans)
 }
 
-fun find(dTemp: Int): Pair<BigInteger, BigInteger> {
+private fun find(dTemp: Int): Pair<BigInteger, BigInteger> {
     val (adder, period) = findPeriodFromSqrt(dTemp)
     val d = dTemp.toBigInteger()
     for (i in 0..Int.MAX_VALUE) {
@@ -36,9 +36,9 @@ fun find(dTemp: Int): Pair<BigInteger, BigInteger> {
     return BigInteger.ZERO to BigInteger.ZERO
 }
 
-fun isCorrectAnswer(x: BigInteger, y: BigInteger, d: BigInteger) = ((x * x) - d * (y * y)) == BigInteger.ONE
+private fun isCorrectAnswer(x: BigInteger, y: BigInteger, d: BigInteger) = ((x * x) - d * (y * y)) == BigInteger.ONE
 
-fun Int.isSquare() = with(sqrt(this.toDouble())) { this == floor(this) }
+private fun Int.isSquare() = with(sqrt(this.toDouble())) { this == floor(this) }
 
 private fun findPeriodFromSqrt(number: Int): Pair<Int, List<Int>> {
     if (number.isSquare())

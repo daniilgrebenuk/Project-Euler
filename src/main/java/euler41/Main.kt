@@ -16,7 +16,7 @@ fun main() {
     println(start - System.currentTimeMillis())
 }
 
-fun Int.isPandigital(): Boolean {
+private fun Int.isPandigital(): Boolean {
     val tempString = this.toString()
 
     if (tempString.contains("0"))

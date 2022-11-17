@@ -15,7 +15,7 @@ fun main() {
     println(res)
 }
 
-fun String.romanToInt(): Int {
+private fun String.romanToInt(): Int {
     var result = 0
     val chars = this.toCharArray()
     var index = 0
@@ -65,7 +65,7 @@ fun String.romanToInt(): Int {
     return result
 }
 
-fun Int.toRoman(): String {
+private fun Int.toRoman(): String {
     val result = StringBuilder()
     var number = this
 
